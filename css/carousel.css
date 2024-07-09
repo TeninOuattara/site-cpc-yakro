@@ -1,0 +1,36 @@
+.carousel-item {
+  display: none; /* Masquer tous les items initialement */
+  transition: opacity 1s ease-in-out; /* Transition fluide */
+}
+
+.carousel-item.active {
+  display: block; /* Afficher seulement l'item actif */
+  opacity: 1; /* Assurer que l'item actif est complètement opaque */
+}
+
+.carousel-inner {
+  overflow: hidden; /* Empêche le défilement des images en dehors du cadre du carrousel */
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item.active {
+  display: block; /* Toujours afficher les items en cours de transition */
+}
+
+.carousel-item-next,
+.carousel-item-prev {
+  opacity: 0; /* Commencer la transition à partir de l'opacité 0 */
+}
+
+.carousel-item-next.carousel-item-left,
+.carousel-item-prev.carousel-item-right,
+.carousel-item.active {
+  opacity: 1; /* L'item de destination devient complètement opaque */
+}
+
+.carousel-item-next,
+.carousel-item-prev,
+.carousel-item {
+  transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out; /* Transition fluide */
+}
